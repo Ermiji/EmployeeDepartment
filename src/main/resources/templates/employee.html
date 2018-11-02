@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee List</title>
+</head>
+<body>
+<h1>Employee Form</h1>
+
+<form action="#"
+      th:action="@{/processemployee}"
+      th:object="${employee}"
+      method="post">
+
+    <input type="hidden" th:field="*{id}" />
+
+    First Name :<input type="text" th:field="*{fName}" />
+
+    <span th:if="${#fields.hasErrors('fName')}"
+          th:errors="*{fName}"></span><br />
+
+    Last Name :<input type="text" th:field="*{lName}" />
+
+    <span th:if="${#fields.hasErrors('lName')}"
+          th:errors="*{lName}"></span><br />
+
+    Job Title :<input type="text" th:field="*{jobTitle}" />
+
+    <span th:if="${#fields.hasErrors('jobTitle')}"
+          th:errors="*{jobTitle}"></span><br />
+
+    <input type="submit" value="Submit" />
+
+</form>
+
+</body>
+</html>
