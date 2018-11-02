@@ -11,7 +11,6 @@ public class Employee {
     private String fName;
     private String lName;
     private String jobTitle;
-//    private String depName;
 
     @OneToMany(mappedBy =  "employee", cascade = CascadeType.ALL,
     fetch = FetchType.EAGER)

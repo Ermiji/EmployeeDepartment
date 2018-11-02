@@ -17,18 +17,10 @@
             th:value="${choose.id}">[[${choose.id}]]</option>
 </select><br/>
 
-    Department 1 :<input type="text" th:field="*{depOne}" />
+    Department :<input type="text" th:field="*{depOne}" />
     <span th:if="${#fields.hasErrors('depOne')}"
           th:errors="*{depOne}"></span><br/>
-
-    Department 2 :<input type="text" th:field="*{depTwo}" />
-    <span th:if="${#fields.hasErrors('depTwo')}"
-          th:errors="*{depTwo}"></span><br/>
-
-
-    Department 3 :<input type="text" th:field="*{depThree}" />
-    <span th:if="${#fields.hasErrors('depThree')}"
-          th:errors="*{depThree}"></span><br/>
+    <br />
 
     <input type="submit" value="Submit" />
 </form>

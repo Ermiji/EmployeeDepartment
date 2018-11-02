@@ -8,18 +8,15 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
     private String depOne;
-    private String depTwo;
-    private String depThree;
+
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
-    public Department(String depOne, String depTwo,
-                      String depThree, Employee employee) {
+    public Department(long id, String depOne, Employee employee) {
+        this.id = id;
         this.depOne = depOne;
-        this.depTwo = depTwo;
-        this.depThree = depThree;
         this.employee = employee;
     }
 
@@ -40,22 +37,6 @@ public class Department {
 
     public void setDepOne(String depOne) {
         this.depOne = depOne;
-    }
-
-    public String getDepTwo() {
-        return depTwo;
-    }
-
-    public void setDepTwo(String depTwo) {
-        this.depTwo = depTwo;
-    }
-
-    public String getDepThree() {
-        return depThree;
-    }
-
-    public void setDepThree(String depThree) {
-        this.depThree = depThree;
     }
 
     public Employee getEmployee() {
