@@ -11,7 +11,8 @@ Employee :<span th:text="${department.id}" ></span><br />
 First Name :<span th:text="${department.employee.fName}"/></span><br />
 Last Name :<span th:text="${department.employee.lName}"/></span><br />
 Job Title :<span th:text="${department.employee.jobTitle}"/></span><br />
-Department name :<span th:text="${department.depOne}"/></span><br />
+Department Name :<span th:text="${department.depName}"/></span><br />
 
+<a th:href="@{/delete/{id}(id=${department.id})}">Delete</a>
 </body>
 </html>

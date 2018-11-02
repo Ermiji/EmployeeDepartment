@@ -21,13 +21,12 @@
         <td th:text="${department.employee.fName}"></td>
         <td th:text="${department.employee.lName}"></td>
         <td th:text="${department.employee.jobTitle}"></td>
-        <!--<td th:text="${testscore.subject}"></td>
-        <td th:text="${testscore.date}"></td>-->
-        <td th:text="${department.depOne}"></td>
+        <td th:text="${department.depName}"></td>
 
         <td>
             <a th:href="@{/update/{id}(id=${department.id})}">Update</a>
             <a th:href="@{/detail/{id}(id=${department.id})}">Details</a>
+            <a th:href="@{/delete/{id}(id=${department.id})}">Delete</a>
 
         </td>
     </tr>

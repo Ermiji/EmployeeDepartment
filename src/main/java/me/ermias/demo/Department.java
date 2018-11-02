@@ -7,16 +7,16 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
-    private String depOne;
+    private String depName;
 
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "employee_id")
     private Employee employee;
 
-    public Department(long id, String depOne, Employee employee) {
+    public Department(long id, String depName, Employee employee) {
         this.id = id;
-        this.depOne = depOne;
+        this.depName = depName;
         this.employee = employee;
     }
 
@@ -31,12 +31,12 @@ public class Department {
         this.id = id;
     }
 
-    public String getDepOne() {
-        return depOne;
+    public String getDepName() {
+        return depName;
     }
 
-    public void setDepOne(String depOne) {
-        this.depOne = depOne;
+    public void setDepName(String depName) {
+        this.depName = depName;
     }
 
     public Employee getEmployee() {

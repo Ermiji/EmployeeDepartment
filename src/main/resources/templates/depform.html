@@ -17,9 +17,9 @@
             th:value="${choose.id}">[[${choose.id}]]</option>
 </select><br/>
 
-    Department :<input type="text" th:field="*{depOne}" />
-    <span th:if="${#fields.hasErrors('depOne')}"
-          th:errors="*{depOne}"></span><br/>
+    Department :<input type="text" th:field="*{depName}" />
+    <span th:if="${#fields.hasErrors('depName')}"
+          th:errors="*{depName}"></span><br/>
     <br />
 
     <input type="submit" value="Submit" />

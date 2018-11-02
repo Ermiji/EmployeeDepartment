@@ -27,7 +27,7 @@ public class MainController {
     }
 
     @GetMapping("/add")
-    public String departmetnForm(Model model){
+    public String departmentForm(Model model){
         model.addAttribute("department", new Department());
         model.addAttribute("employees", employeeRepository.findAll());
         return "depform";
@@ -73,4 +73,10 @@ public class MainController {
         return "depform";
     }
 
+    @RequestMapping("/delete/{id}")
+    public String delEmployee(@PathVariable("id") long id, Model model){
+        model.addAttribute("department", departmentRepository.findById(id));
+        departmentRepository.deleteById(id);
+        return "redirect:/";
+    }
 }
