@@ -14,7 +14,7 @@
 
     Employee :<select th:field="*{employee}" class="form-control input-md">
     <option th:each="choose: ${employees}"
-            th:value="${choose.id}">[[${choose.fName}]]</option>
+            th:value="${choose.id}">[[${choose.fName + " " + choose.lName}]]</option>
 </select><br/>
 
     Department :<input type="text" th:field="*{depName}" />

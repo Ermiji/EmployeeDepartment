@@ -74,8 +74,7 @@ public class MainController {
     }
 
     @RequestMapping("/delete/{id}")
-    public String delEmployee(@PathVariable("id") long id, Model model){
-        model.addAttribute("department", departmentRepository.findById(id));
+    public String delEmployee(@PathVariable("id") long id){
         departmentRepository.deleteById(id);
         return "redirect:/";
     }
