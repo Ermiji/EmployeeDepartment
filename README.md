@@ -1,0 +1,2 @@
+# EmployeeDepartment
+This application will have a list of all employees and departments at a company. The application must include the following: 10A table for employeses. 2)Each employee should have a name, job title, and the name of the department they work under...a)A table for departments. b)A page listing all departments. c)A page listing all employees and their departments. 4)User should be able to: a)use forms to add one or more departments to the database. b)use forms to add one or more employees and their designated departments to the database.
